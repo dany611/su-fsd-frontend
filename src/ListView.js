@@ -12,7 +12,7 @@ const ListWithDropdown = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:3002/v1/files?sortColumn=${sort?.sortColumn}&sortDirection=${sort?.sortDirection}`)
+        fetch(`https://su-fsd-backend-production.up.railway.app/v1/files?sortColumn=${sort?.sortColumn}&sortDirection=${sort?.sortDirection}`)
             .then((response) => response.json())
             .then((data) => {
                 setData(data.files);
